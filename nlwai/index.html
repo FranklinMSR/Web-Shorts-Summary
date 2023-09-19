@@ -13,22 +13,37 @@
       rel="stylesheet"
     />
 
-    <title>Shorts Summary</title>
+    <title>Shorts Summary Chat</title>
   </head>
   <body>
     <div id="app">
-      <img src="/logo.svg" alt="Logo" />
-      <h1>Shorts Summary</h1>
-
-      <form id="form">
-        <input type="url" id="url" placeholder="URL do vídeo" />
-        <button title="Resumir">
-          <i class="ph ph-play"></i>
-        </button>
-      </form>
-
-      <h2>Resumo</h2>
-      <p id="content" class="placeholder">Escolha um short para resumir</p>
+      <div id="chat-container">
+        <div id="messages-container"></div>
+      </div>
+      <div id="app-footer">
+        <form id="form">
+          <input
+            type="url"
+            autocomplete="off"
+            id="url"
+            placeholder="Insira a URL do vídeo aqui"
+          />
+          <button id="form-button">
+            <i class="ph-fill ph-paper-plane-right"></i>
+          </button>
+          <div id="form-loading" class="loading hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </form>
+        <span>
+          Desenvolvido por
+          <a href="http://github.com/FranklinMSR" target="_blank">
+            Franklin Marden.
+          </a>
+        </span>
+      </div>
     </div>
     <script type="module" src="web/main.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>

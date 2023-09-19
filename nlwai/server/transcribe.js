@@ -4,12 +4,12 @@ import { transcriptionExample } from "./utils/transcription.js"
 
 export async function transcribe(audio) {
   try {
-    // return transcriptionExample
+    //return transcriptionExample
 
     console.log("Realizando a transcrição...")
     const transcribe = await pipeline(
       "automatic-speech-recognition",
-      "Xenova/whisper-base"
+      "Xenova/mms-1b-all"
     )
 
     const transcription = await transcribe(audio, {
