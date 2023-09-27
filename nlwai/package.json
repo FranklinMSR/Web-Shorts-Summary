@@ -9,7 +9,8 @@
   "scripts": {
     "web": "vite",
     "server": "set YTDL_NO_UPDATE=1 && node --watch --no-warnings server/index.js",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "npm run build"
   },
   "devDependencies": {
     "tsup": "^7.2.0",
