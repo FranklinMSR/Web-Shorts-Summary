@@ -1,4 +1,5 @@
 {
+  "homepage": "https://franklinmsr.github.io/web-shorts-summary",
   "name": "nlwia",
   "private": true,
   "version": "0.0.0",
@@ -7,14 +8,18 @@
     "node": "18.x"
   },
   "scripts": {
-    "web": "vite",
+    "dev": "vite",
     "server": "set YTDL_NO_UPDATE=1 && node --watch --no-warnings server/index.js",
     "start": "node server/index.js",
-    "build": "npm run build"
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "devDependencies": {
     "tsup": "^7.2.0",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "gh-pages": "^6.0.0"
   },
   "dependencies": {
     "@xenova/transformers": "^2.6.0",
